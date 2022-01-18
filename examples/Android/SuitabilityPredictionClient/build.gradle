@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+    allprojects {
+        ext.getPrivateProperty = { propertyName ->
+            def privatePropertiesFile = rootProject.file("private.properties")
+            def privateProperties = new Properties()
+
+            if (privatePropertiesFile.exists()) {
+                privateProperties.load(new FileInputStream(privatePropertiesFile))
+            }
+
+            return privateProperties[propertyName]
+        }
+
+        repositories {
+            google()
+            mavenCentral()
+            // TODO: add your API key as a property with name "repo_token" to private.properties with
+            def repo_token = getPrivateProperty("repo_token")
+            maven { url "https://www.myget.org/F/omhu-partner/auth/$repo_token/maven" }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
