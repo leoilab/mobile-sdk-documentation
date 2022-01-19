@@ -15,6 +15,12 @@ android {
 
         // TODO: add your API key as a property with name "api_key" to private.properties with
         buildConfigField "String", "SUITABILITY_API_KEY", "${getPrivateProperty("api_key")}"
+
+        // Exclude X86 ABI to reduce the final APK size. This is because we have
+        // the full OpenCV library as a dependency which results in a huge APK size.
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
     }
 
     buildTypes {
