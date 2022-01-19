@@ -30,7 +30,7 @@ If you use [CocoaPods](https://cocoapods.org/) to manage your dependencies, simp
 The `SuitabilityPredictionClient` must be initialized with a private API key in order to work:
 
 ```swift
-let client: SuitabilityClient = .suitability(apiKey: "[YOUR_API_KEY_HERE]")
+let client: SuitabilityClient = .configure(withKey: "[YOUR_API_KEY_HERE]")
 ```
 
 We recommend initializing and storing the resulting suitability client in an application `Environment` object in order to allow easy access within your application. Initializing `SuitabilityClient` isn't a cheap operation and repeating it is discouraged.
