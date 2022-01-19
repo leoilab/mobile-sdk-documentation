@@ -81,6 +81,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val TEST_IMAGE_PATH = "test_image.jpeg"
+        private const val TEST_IMAGE_PATH = "test_image.jpg"
     }
 }
