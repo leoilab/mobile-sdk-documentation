@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val bitmap = getTestImageFromAssets()
         val bitmapPath = saveBitmapToDisk(bitmap) ?: return
 
-        val outlineGenerator = OutlineGenerator(BuildConfig.IMAGE_OUTLINE_API_KEY)
+        val outlineGenerator = OutlineGenerator(this, BuildConfig.IMAGE_OUTLINE_API_KEY)
         val callback = object : OutlineGenerator.OnOutlineGeneratedCallback {
             override fun onOutlineGenerated(path: String) {
                 findViewById<ImageView>(R.id.image).setImageURI(Uri.parse(path))
@@ -39,10 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         outlineGenerator.generateOutline(
-            context = this@MainActivity,
             sourcePath = bitmapPath,
-            minimumWidth = 0,
-            minimumHeight = 0,
             outlineType = OutlineType.OUTLINE_COLOR,
             callback = callback
         )
