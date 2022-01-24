@@ -32,6 +32,9 @@
 		687C29912791CE2100F77B5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		687C29932791CE2200F77B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687C29962791CE2300F77B5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		68C73A43279ECA6700AB777E /* SuitabilityPredictionClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SuitabilityPredictionClient.xcframework; path = "../../../../mobile-sdk-distribution/SuitabilityPredictionClient/SuitabilityPredictionClient.xcframework"; sourceTree = "<group>"; };
+		68C73A47279ECA6900AB777E /* ImageTuning.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ImageTuning.xcframework; path = "../../../../mobile-sdk-distribution/SuitabilityPredictionClient/ImageTuning.xcframework"; sourceTree = "<group>"; };
+		68C73A4A279ECA6B00AB777E /* Afterparty.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Afterparty.xcframework; path = "../../../../mobile-sdk-distribution/SuitabilityPredictionClient/Afterparty.xcframework"; sourceTree = "<group>"; };
 		924E692819F5A7968EF25D92 /* Pods-ImageOutlineExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageOutlineExample.debug.xcconfig"; path = "Target Support Files/Pods-ImageOutlineExample/Pods-ImageOutlineExample.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F7AAA8F3648749A2AC317 /* Pods_SuitabilityPredictionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuitabilityPredictionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B9E1D87B09E20F40EEB716 /* Pods-SuitabilityPredictionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitabilityPredictionExample.release.xcconfig"; path = "Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,13 +127,15 @@
 				924E692819F5A7968EF25D92 /* Pods-ImageOutlineExample.debug.xcconfig */,
 				24E715549C76E457017B12EE /* Pods-ImageOutlineExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		F58B5726CA7FB555908E66EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68C73A4A279ECA6B00AB777E /* Afterparty.xcframework */,
+				68C73A47279ECA6900AB777E /* ImageTuning.xcframework */,
+				68C73A43279ECA6700AB777E /* SuitabilityPredictionClient.xcframework */,
 				D03F7AAA8F3648749A2AC317 /* Pods_SuitabilityPredictionExample.framework */,
 				FCA2BA7B5B2EBFD2C5D67274 /* Pods_ImageOutlineExample.framework */,
 			);
@@ -165,11 +170,11 @@
 			buildConfigurationList = 687C29982791CE2300F77B5F /* Build configuration list for PBXNativeTarget "SuitabilityPredictionExample" */;
 			buildPhases = (
 				17514C68D711B0E56C9F294D /* [CP] Check Pods Manifest.lock */,
-				4D2FB7A91DDA41C0972DCC46 /* [CP] Prepare Artifacts */,
+				252D76D87F80010648C3F89E /* [CP] Prepare Artifacts */,
 				687C29892791CE2100F77B5F /* Sources */,
 				687C298A2791CE2100F77B5F /* Frameworks */,
 				687C298B2791CE2100F77B5F /* Resources */,
-				485A0C579C749D20C0361455 /* [CP] Embed Pods Frameworks */,
+				73D8FE1CC2C1CADE77151B66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +266,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		252D76D87F80010648C3F89E /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46C11B1E0290841B9CC55200 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,40 +300,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageOutlineExample/Pods-ImageOutlineExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		485A0C579C749D20C0361455 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D2FB7A91DDA41C0972DCC46 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4F89BF300A0C97F83B3CBD34 /* [CP] Prepare Artifacts */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +315,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageOutlineExample/Pods-ImageOutlineExample-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D8FE1CC2C1CADE77151B66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitabilityPredictionExample/Pods-SuitabilityPredictionExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B13C267285309A155E581C90 /* [CP] Check Pods Manifest.lock */ = {
