@@ -7,11 +7,11 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'ImageOutlineExample' do
-  pod 'ImageOutlineClient', :git => 'https://github.com/leoilab/mobile-sdk-distribution.git'
+  pod 'ImageOutlineClient', :git => 'git@github.com:leoilab/mobile-sdk-distribution.git'
 end
 
 target 'SuitabilityPredictionExample' do
-  pod 'SuitabilityPredictionClient', :git => 'https://github.com/leoilab/mobile-sdk-distribution.git'
+  pod 'SuitabilityPredictionClient', :git => 'git@github.com:leoilab/mobile-sdk-distribution.git'
 end
 
 post_install do |installer|

@@ -16,8 +16,8 @@ PODS:
     - TensorFlowLiteSwift/Core (= 2.4.0)
 
 DEPENDENCIES:
-  - ImageOutlineClient (from `https://github.com/leoilab/mobile-sdk-distribution.git`)
-  - SuitabilityPredictionClient (from `https://github.com/leoilab/mobile-sdk-distribution.git`)
+  - "ImageOutlineClient (from `git@github.com:leoilab/mobile-sdk-distribution.git`)"
+  - "SuitabilityPredictionClient (from `git@github.com:leoilab/mobile-sdk-distribution.git`)"
 
 SPEC REPOS:
   trunk:
@@ -27,17 +27,17 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   ImageOutlineClient:
-    :git: https://github.com/leoilab/mobile-sdk-distribution.git
+    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
   SuitabilityPredictionClient:
-    :git: https://github.com/leoilab/mobile-sdk-distribution.git
+    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
 
 CHECKOUT OPTIONS:
   ImageOutlineClient:
-    :commit: b3b6eb4027defc05ef7444ed62abaca7cc3c5c90
-    :git: https://github.com/leoilab/mobile-sdk-distribution.git
+    :commit: 233007ecae1bd3acbeaffa6992f6b828d19f6e24
+    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
   SuitabilityPredictionClient:
-    :commit: b3b6eb4027defc05ef7444ed62abaca7cc3c5c90
-    :git: https://github.com/leoilab/mobile-sdk-distribution.git
+    :commit: 233007ecae1bd3acbeaffa6992f6b828d19f6e24
+    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
 
 SPEC CHECKSUMS:
   ImageOutlineClient: b9c3ecbb50e3c0b7a67f49ee5f648b46a632a76b
@@ -46,6 +46,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteC: 09f8ac75a76caeadb19bcfa694e97454cc1ecf87
   TensorFlowLiteSwift: f062dc1178120100d825d7799fd9f115b4a37fee
 
-PODFILE CHECKSUM: 855aa1e305cac3209309ebd77f00d5a2efb98245
+PODFILE CHECKSUM: 96a3d9d98021820eada3f641c7054b2bae2f62ba
 
 COCOAPODS: 1.9.1

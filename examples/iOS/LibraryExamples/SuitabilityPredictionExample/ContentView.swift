@@ -8,7 +8,7 @@
 import SwiftUI
 import SuitabilityPredictionClient
 
-let client: SuitabilityClient = .suitability(apiKey: "")
+let client: SuitabilityClient = .configure(withKey: "")
 
 struct ContentView: View {
 
