@@ -8,11 +8,12 @@
 import SwiftUI
 import SuitabilityPredictionClient
 
-let client: SuitabilityClient = .configure(withKey: "")
-
 struct ContentView: View {
 
     @State var suitabilityResult: SuitabilityResult?
+//    @State var cancellable: AnyCancellable?
+
+    let client: SuitabilityClient? = .configure(withKey: "")
 
     var body: some View {
         VStack {
@@ -27,9 +28,12 @@ struct ContentView: View {
         }
         .onAppear {
             Task {
-                suitabilityResult = try? await client.predict(
+                suitabilityResult = try? await client?.predict(
                     input: UIImage(named: "hand")!)
             }
+            /*
+             cancellable = client?.predict(UIImage(named: "hand")!).sink(...)
+             */
         }
     }
 }
