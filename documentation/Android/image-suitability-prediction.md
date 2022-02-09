@@ -16,7 +16,7 @@ Where "no evaluation possible" means that the quality of the photo is very bad (
 1. To use the library in your project add the following line in your module gradle build file:
 
 ```gradle
-implementation 'com.omhu:suitability-prediction:1.0.0'
+implementation 'com.omhu:suitability-prediction:1.0.1'
 ```
 
 2. Since the library is hosted in a private Maven repository you need to include the repository in your top level gradle build file:
