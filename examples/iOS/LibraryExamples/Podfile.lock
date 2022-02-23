@@ -1,7 +1,10 @@
 PODS:
-  - ImageOutlineClient (1.0.0)
+  - ImageOutlineClient (1.0.0):
+    - OmhuTrackingClient (= 1.0)
+  - OmhuTrackingClient (1.0.0)
   - OpenCV (4.1.0)
   - SuitabilityPredictionClient (1.0.0):
+    - OmhuTrackingClient (= 1.0)
     - OpenCV (= 4.1)
     - TensorFlowLiteSwift/CoreML (= 2.4.0)
   - TensorFlowLiteC (2.4.0):
@@ -16,38 +19,27 @@ PODS:
     - TensorFlowLiteSwift/Core (= 2.4.0)
 
 DEPENDENCIES:
-  - "ImageOutlineClient (from `git@github.com:leoilab/mobile-sdk-distribution.git`, tag `ImageOutline-v1`)"
-  - "SuitabilityPredictionClient (from `git@github.com:leoilab/mobile-sdk-distribution.git`, tag `SuitabilityPredictionClient-v1`)"
+  - ImageOutlineClient (~> 1.0)
+  - SuitabilityPredictionClient (~> 1.0)
 
 SPEC REPOS:
+  https://github.com/leoilab/mobile-sdk-distribution:
+    - ImageOutlineClient
+    - OmhuTrackingClient
+    - SuitabilityPredictionClient
   trunk:
     - OpenCV
     - TensorFlowLiteC
     - TensorFlowLiteSwift
 
-EXTERNAL SOURCES:
-  ImageOutlineClient:
-    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
-    :tag: ImageOutline-v1
-  SuitabilityPredictionClient:
-    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
-    :tag: SuitabilityPredictionClient-v1
-
-CHECKOUT OPTIONS:
-  ImageOutlineClient:
-    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
-    :tag: ImageOutline-v1
-  SuitabilityPredictionClient:
-    :git: "git@github.com:leoilab/mobile-sdk-distribution.git"
-    :tag: SuitabilityPredictionClient-v1
-
 SPEC CHECKSUMS:
-  ImageOutlineClient: b9c3ecbb50e3c0b7a67f49ee5f648b46a632a76b
+  ImageOutlineClient: 2c46764fb72b7e4a8bb04b9375af84598c38db4a
+  OmhuTrackingClient: ede8090cb2d632adb48e561c6f1536e1985fe1d2
   OpenCV: 52cd4d72ff29e2be83421477aec5447320b7fb19
-  SuitabilityPredictionClient: c189bf37b3aae2a87f5857eaa12bfb2ab5a5096d
+  SuitabilityPredictionClient: 4d170dc0c1e93b805dfde90656be97f410cddddd
   TensorFlowLiteC: 09f8ac75a76caeadb19bcfa694e97454cc1ecf87
   TensorFlowLiteSwift: f062dc1178120100d825d7799fd9f115b4a37fee
 
-PODFILE CHECKSUM: 6ec8ced926d9c9892cef653bc18cd876cae49e3f
+PODFILE CHECKSUM: bc13af50ec4118c956251c1ca7a134cd37a73251
 
 COCOAPODS: 1.9.1

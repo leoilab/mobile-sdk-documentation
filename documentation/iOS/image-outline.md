@@ -12,7 +12,13 @@ The `ImageOutlineClient` supports iOS 14.0 and up.
 If you use [CocoaPods](https://cocoapods.org/) to manage your dependencies, simply add this to your `Podfile`:
 
 ```
-pod 'ImageOutlineClient', :git => 'https://github.com/leoilab/mobile-sdk-distribution.git'
+pod 'ImageOutlineClient', '~> 1.0'
+```
+
+You need to include the correct source in order to access the pods:
+
+```
+source 'https://github.com/leoilab/mobile-sdk-distribution'
 ```
 
 ## Usage

@@ -23,6 +23,12 @@ If you use [CocoaPods](https://cocoapods.org/) to manage your dependencies, simp
  pod 'SuitabilityPredictionClient', :git => 'https://github.com/leoilab/mobile-sdk-distribution.git'
 ```
 
+You need to include the correct source in order to access the pods:
+
+```
+source 'https://github.com/leoilab/mobile-sdk-distribution'
+```
+
 ## Usage
 
 ### Initialization
