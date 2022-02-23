@@ -2,16 +2,17 @@ platform :ios, '14.0'
 
 # source 'git@github.com:leoilab/imagine_specs.git'
 source 'https://cdn.cocoapods.org/'
+source 'https://github.com/leoilab/mobile-sdk-distribution'
 
 inhibit_all_warnings!
 use_frameworks!
 
 target 'ImageOutlineExample' do
-  pod 'ImageOutlineClient', :git => 'git@github.com:leoilab/mobile-sdk-distribution.git', :tag => 'ImageOutline-v1'
+  pod 'ImageOutlineClient', '~> 1.0'
 end
 
 target 'SuitabilityPredictionExample' do
-  pod 'SuitabilityPredictionClient', :git => 'git@github.com:leoilab/mobile-sdk-distribution.git', :tag => 'SuitabilityPredictionClient-v1'
+  pod 'SuitabilityPredictionClient', '~> 1.0'
 end
 
 post_install do |installer|
