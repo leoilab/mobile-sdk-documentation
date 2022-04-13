@@ -8,7 +8,7 @@ It is possible to get a white outline, or a colored one.
 1. To use the library in your project add the following line in your module gradle build file:
 
 ```gradle
-implementation 'com.omhu:image-outline:1.0.2'
+implementation 'com.omhu:image-outline:1.1.0'
 ```
 
 2. Since the library is hosted in a private Maven repository you need to include the repository in your top-level gradle build file:
